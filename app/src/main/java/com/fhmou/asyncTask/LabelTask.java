@@ -7,11 +7,10 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
-import com.fhmou.activity.book.AbstractObject;
-import com.fhmou.activity.book.Label;
+import com.fhmou.tools.json.AbstractObject;
+import com.fhmou.entity.Label;
 import com.fhmou.adapter.LabelAdapter;
 import com.fhmou.fragment.LabelFragment;
-import com.fhmou.http.HttpAgent;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,7 +25,6 @@ import java.util.List;
  */
 public class LabelTask extends AsyncTask<String, Integer, Integer> {
 
-    public HttpAgent httpAgent = new HttpAgent();
     public HashMap<String, Object> paras = new HashMap<String, Object>();
     private String msgCode = "";
     private LabelFragment labelFragment;
@@ -60,8 +58,8 @@ public class LabelTask extends AsyncTask<String, Integer, Integer> {
 
     @Override
     protected Integer doInBackground(String... arg0) {
-        String result = httpAgent.request("api/app/labels", paras, "");
-        labelList = parseLableList(result);
+//        String result = httpAgent.request("api/app/labels", paras, "");
+//        labelList = parseLableList(result);
         return null;
     }
     private List<Label> parseLableList(String result) {

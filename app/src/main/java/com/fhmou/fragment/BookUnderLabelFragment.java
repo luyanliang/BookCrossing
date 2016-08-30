@@ -10,7 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.fhmou.activity.R;
-import com.fhmou.activity.book.Book;
+import com.fhmou.entity.Book;
 import com.fhmou.activity.book.BookDetailActivity;
 import com.fhmou.asyncTask.BookUnderLableTask;
 

@@ -7,7 +7,7 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.fhmou.fragment.LabelFragment;
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.Https;
 
 import java.util.HashMap;
 
@@ -29,7 +29,7 @@ public class RemoveLabelTask extends AsyncTask<String, Integer, Integer> {
 
     @Override
     protected Integer doInBackground(String... arg0) {
-        HttpAgent httpAgent = new HttpAgent();
+        Https httpAgent = new Https();
         HashMap<String, Object> paras = new HashMap<String, Object>();
         paras.put("labelId", arg0[0]);
         String result = httpAgent.request("api/app/label-remove", paras, "");

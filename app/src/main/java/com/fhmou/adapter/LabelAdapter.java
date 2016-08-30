@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.fhmou.activity.R;
-import com.fhmou.activity.book.Label;
+import com.fhmou.entity.Label;
 
 import java.util.List;
 

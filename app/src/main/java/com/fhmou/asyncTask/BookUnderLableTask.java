@@ -6,10 +6,10 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.fhmou.activity.book.Book;
+import com.fhmou.entity.Book;
 import com.fhmou.adapter.BookAdapter;
 import com.fhmou.fragment.BookUnderLabelFragment;
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.Https;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,7 +32,7 @@ public class BookUnderLableTask extends AsyncTask<String, Integer, List<Book>> {
 
     @Override
     protected List<Book> doInBackground(String... params) {
-        HttpAgent httpAgent = new HttpAgent();
+        Https httpAgent = new Https();
         HashMap<String, Object> paras = new HashMap<String, Object>();
         paras.put("labelId", params[0]);
         String result = httpAgent.request("api/app/books-under-label", paras, "");

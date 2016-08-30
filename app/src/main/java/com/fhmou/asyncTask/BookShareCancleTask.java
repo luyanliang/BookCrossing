@@ -9,7 +9,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.fhmou.fragment.MybookFragment;
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.Https;
 
 public class BookShareCancleTask extends AsyncTask<String, Integer, Integer> {
 
@@ -35,7 +35,7 @@ public class BookShareCancleTask extends AsyncTask<String, Integer, Integer> {
 	@Override
 	protected Integer doInBackground(String... params) {
 		int code = 500;
-		HttpAgent httpAgent = new HttpAgent();
+		Https httpAgent = new Https();
 		HashMap<String, Object> paras = new HashMap<String, Object>();
 		paras.put("bookId", params[0]);
 		String result = httpAgent.request("api/app/cancle-share", paras, "");

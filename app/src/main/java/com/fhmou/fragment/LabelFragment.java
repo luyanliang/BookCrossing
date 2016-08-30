@@ -2,7 +2,6 @@ package com.fhmou.fragment;
 
 import java.util.List;
 
-import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -20,7 +19,7 @@ import android.widget.EditText;
 import android.widget.GridView;
 
 import com.fhmou.activity.R;
-import com.fhmou.activity.book.Label;
+import com.fhmou.entity.Label;
 import com.fhmou.asyncTask.AddLabelTask;
 import com.fhmou.asyncTask.LabelTask;
 import com.fhmou.asyncTask.RemoveLabelTask;

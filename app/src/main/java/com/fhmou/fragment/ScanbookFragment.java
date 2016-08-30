@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fhmou.activity.R;
-import com.fhmou.activity.book.BookInfo;
+import com.fhmou.entity.BookInfo;
 import com.fhmou.asyncTask.ShareTask;
 
 @SuppressLint("ValidFragment") 

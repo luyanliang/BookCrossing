@@ -10,7 +10,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 
 import com.fhmou.activity.user.RegisterActivity;
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.Https;
 
 /**
  * 异步任务验证注册
@@ -20,7 +20,7 @@ import com.fhmou.http.HttpAgent;
  */
 public class RegisterTask extends AsyncTask<String, Integer, Integer> {
     //ProgressDialog pd;
-    public HttpAgent httpAgent = new HttpAgent();
+    public Https httpAgent = new Https();
     private RegisterActivity signup = new RegisterActivity();
     public HashMap<String, Object> paras = new HashMap<String, Object>();
     private String code = "";

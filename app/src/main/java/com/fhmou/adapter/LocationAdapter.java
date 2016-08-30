@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.fhmou.activity.R;
-import com.fhmou.activity.user.UserLocation;
+import com.fhmou.entity.UserLocation;
 
 import java.util.List;
 

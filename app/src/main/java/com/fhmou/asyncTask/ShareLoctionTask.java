@@ -10,7 +10,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.Https;
 
 public class ShareLoctionTask extends AsyncTask<String, Integer, Integer> {
 
@@ -29,7 +29,7 @@ public class ShareLoctionTask extends AsyncTask<String, Integer, Integer> {
 		paras.put("address", params[2]);
 		
 		int code = 500;
-		HttpAgent httpAgent = new HttpAgent();
+		Https httpAgent = new Https();
 		String result = httpAgent.request("api/app/add-location", paras, "");
 		try {
 			JSONObject jsonResult = new JSONObject(result);

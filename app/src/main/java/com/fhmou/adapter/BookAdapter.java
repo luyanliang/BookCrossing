@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.fhmou.activity.R;
-import com.fhmou.activity.book.Book;
+import com.fhmou.entity.Book;
 import com.fhmou.asyncTask.BitmapTask;
 
 import java.util.List;

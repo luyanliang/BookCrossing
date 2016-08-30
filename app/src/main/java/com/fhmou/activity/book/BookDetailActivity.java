@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.fhmou.activity.R;
 import com.fhmou.asyncTask.BitmapTask;
+import com.fhmou.entity.Book;
 
 /**
  * package com.fhmou.activity.book

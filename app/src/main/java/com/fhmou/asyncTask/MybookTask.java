@@ -11,10 +11,10 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.fhmou.activity.book.Book;
+import com.fhmou.entity.Book;
 import com.fhmou.adapter.BookAdapter;
 import com.fhmou.fragment.MybookFragment;
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.Https;
 
 public class MybookTask extends AsyncTask<String, Integer, Integer> {
 	private HashMap<String, Object> paras = new HashMap<String, Object>();
@@ -74,7 +74,7 @@ public class MybookTask extends AsyncTask<String, Integer, Integer> {
 	 */
 	@Override
 	protected Integer doInBackground(String... arg0) {
-		HttpAgent httpAgent = new HttpAgent();
+		Https httpAgent = new Https();
 		String result = httpAgent.request("api/app/mybook", paras, "");
 		bookList = parseJsonResult(result);
 		return null;

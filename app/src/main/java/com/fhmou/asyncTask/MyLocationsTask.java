@@ -5,10 +5,10 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
-import com.fhmou.activity.user.UserLocation;
+import com.fhmou.entity.UserLocation;
 import com.fhmou.adapter.LocationAdapter;
 import com.fhmou.fragment.LocationFragment;
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.Https;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -36,7 +36,7 @@ public class MyLocationsTask extends AsyncTask<String, Integer, List<UserLocatio
 	Integer code = 500;
 	@Override
 	protected List<UserLocation> doInBackground(String... params) {
-		HttpAgent httpAgent = new HttpAgent();
+		Https httpAgent = new Https();
 		String result = httpAgent.request("api/app/user-locations", null, "");
 		List<UserLocation> list = parseReustl(result);
 		return list;

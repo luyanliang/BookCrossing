@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONObject;
 import com.fhmou.fragment.LabelFragment;
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.Https;
 
 import java.util.HashMap;
 
@@ -19,7 +19,7 @@ import java.util.HashMap;
  */
 public class AddLabelTask extends AsyncTask<String, Integer, Integer> {
 
-    public HttpAgent httpAgent = new HttpAgent();
+    public Https httpAgent = new Https();
     private String labelName ="";
     private String msgBody;
     public HashMap<String, Object> paras = new HashMap<String, Object>();

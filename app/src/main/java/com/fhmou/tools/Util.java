@@ -3,7 +3,7 @@ package com.fhmou.tools;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import com.fhmou.activity.book.BookInfo;
+import com.fhmou.entity.BookInfo;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

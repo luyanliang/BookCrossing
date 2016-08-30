@@ -27,7 +27,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.fhmou.activity.book.BookInfo;
+import com.fhmou.entity.BookInfo;
 import com.fhmou.activity.user.LoginActivity;
 import com.fhmou.fragment.AboutFragment;
 import com.fhmou.fragment.LabelFragment;

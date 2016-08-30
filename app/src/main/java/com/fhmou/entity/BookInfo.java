@@ -1,4 +1,4 @@
-package com.fhmou.activity.book;
+package com.fhmou.entity;
 
 import android.graphics.Bitmap;
 import android.os.Parcel;

@@ -6,7 +6,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.fhmou.activity.StartActivity;
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.Https;
 
 import org.json.JSONObject;
 
@@ -21,7 +21,7 @@ import java.util.HashMap;
  */
 public class AutoLoginTask extends AsyncTask<String, Integer, Integer> {
 
-    public HttpAgent httpAgent = new HttpAgent();
+    public Https httpAgent = new Https();
     public HashMap<String, Object> paras = new HashMap<String, Object>();
     private StartActivity startActivity;
 

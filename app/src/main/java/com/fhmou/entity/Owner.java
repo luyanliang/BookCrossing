@@ -1,4 +1,4 @@
-package com.fhmou.activity.book;
+package com.fhmou.entity;
 
 import java.io.Serializable;
 

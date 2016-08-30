@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.fhmou.fragment.ScanbookFragment;
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.Https;
 
 import org.json.JSONObject;
 
@@ -20,7 +20,7 @@ import java.util.HashMap;
  */
 public class ShareTask extends AsyncTask<String, Integer, Integer> {
 
-    public HttpAgent httpAgent = new HttpAgent();
+    public Https httpAgent = new Https();
     private String title, author, summary, publisher, isbn10, isbn13, image, price;
     public HashMap<String, Object> paras = new HashMap<String, Object>();
     private String code = "";

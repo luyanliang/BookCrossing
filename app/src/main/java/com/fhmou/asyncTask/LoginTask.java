@@ -6,7 +6,8 @@ import android.os.Message;
 import android.widget.Toast;
 
 import com.fhmou.activity.user.LoginTransitActivity;
-import com.fhmou.http.HttpAgent;
+import com.fhmou.net.AppApis;
+import com.fhmou.net.Https;
 
 import org.json.JSONObject;
 
@@ -21,7 +22,6 @@ import java.util.HashMap;
  */
 public class LoginTask extends AsyncTask<String, Integer, Integer> {
 
-    private HttpAgent httpAgent = new HttpAgent();
     private HashMap<String, Object> paras = new HashMap<String, Object>();
     private String code = "";
     private JSONObject msgBody;
@@ -86,15 +86,7 @@ public class LoginTask extends AsyncTask<String, Integer, Integer> {
      */
     @Override
     protected Integer doInBackground(String... arg0) {
-        String result = httpAgent.request("api/app/login", paras, "");
-        try{
-            JSONObject mess=new JSONObject(result);
-            code = mess.getString("code");
-            msgBody = mess.getJSONObject("msg");
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        AppApis.login(userEmail, password, null);
         return null;
     }
 }

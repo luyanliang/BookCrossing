@@ -2,7 +2,6 @@ package com.fhmou.fragment;
 
 import java.util.List;
 
-import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Fragment;
 import android.content.DialogInterface;
@@ -16,7 +15,7 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 
 import com.fhmou.activity.R;
-import com.fhmou.activity.book.Book;
+import com.fhmou.entity.Book;
 import com.fhmou.asyncTask.BookShareCancleTask;
 import com.fhmou.asyncTask.MybookTask;
 
