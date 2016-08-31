@@ -1,4 +1,4 @@
-package com.fhmou.tools.decoding;
+package com.fhmou.utils.decoding;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,9 +7,9 @@ import android.os.Message;
 import android.util.Log;
 
 import com.fhmou.activity.R;
-import com.fhmou.tools.camera.CameraManager;
-import com.fhmou.tools.camera.PlanarYUVLuminanceSource;
-import com.fhmou.tools.scan.MipcaActivityCapture;
+import com.fhmou.utils.camera.CameraManager;
+import com.fhmou.utils.camera.PlanarYUVLuminanceSource;
+import com.fhmou.utils.scan.MipcaActivityCapture;
 import com.google.zxing.BinaryBitmap;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.MultiFormatReader;

@@ -34,4 +34,7 @@
 
     <item type="id" name="about_version_code">false</item>
     <item type="id" name="split">false</item>
+    <item type="id" name="cpb_progress">false</item>
+    <item type="id" name="progress_message">false</item>
+
 </resources>

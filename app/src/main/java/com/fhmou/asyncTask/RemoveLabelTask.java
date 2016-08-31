@@ -29,19 +29,9 @@ public class RemoveLabelTask extends AsyncTask<String, Integer, Integer> {
 
     @Override
     protected Integer doInBackground(String... arg0) {
-        Https httpAgent = new Https();
-        HashMap<String, Object> paras = new HashMap<String, Object>();
-        paras.put("labelId", arg0[0]);
-        String result = httpAgent.request("api/app/label-remove", paras, "");
 
         JSONObject jsonObject;
         int msgCode = 500;
-        try {
-            jsonObject = JSONObject.parseObject(result);
-            msgCode = jsonObject.getIntValue("code");
-        } catch (JSONException e) {
-            Log.e("book", e.getMessage(),e);
-        }
 
         return msgCode;
     }
@@ -49,7 +39,7 @@ public class RemoveLabelTask extends AsyncTask<String, Integer, Integer> {
     @Override
     protected void onPostExecute(Integer result) {
         super.onPostExecute(result);
-        if(result == 500){
+        if(result == 500) {
             Toast.makeText(labelFragment.getActivity(), "删除失败",
                     Toast.LENGTH_LONG).show();
         }else{

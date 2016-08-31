@@ -20,7 +20,6 @@ import com.fhmou.net.Https;
  */
 public class RegisterTask extends AsyncTask<String, Integer, Integer> {
     //ProgressDialog pd;
-    public Https httpAgent = new Https();
     private RegisterActivity signup = new RegisterActivity();
     public HashMap<String, Object> paras = new HashMap<String, Object>();
     private String code = "";
@@ -94,15 +93,6 @@ public class RegisterTask extends AsyncTask<String, Integer, Integer> {
      */
     @Override
     protected Integer doInBackground(String... arg0) {
-        String result = httpAgent.request("api/app/register", paras, "");
-        try{
-            JSONObject mess=new JSONObject(result);
-            code = mess.getString("code");
-            msg = mess.getString("msg");
-        }catch (Exception e) {
-            e.printStackTrace();
-        }
-
         return null;
     }
 }

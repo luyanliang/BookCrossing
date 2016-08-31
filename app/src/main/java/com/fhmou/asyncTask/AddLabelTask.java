@@ -19,7 +19,6 @@ import java.util.HashMap;
  */
 public class AddLabelTask extends AsyncTask<String, Integer, Integer> {
 
-    public Https httpAgent = new Https();
     private String labelName ="";
     private String msgBody;
     public HashMap<String, Object> paras = new HashMap<String, Object>();
@@ -58,14 +57,6 @@ public class AddLabelTask extends AsyncTask<String, Integer, Integer> {
      */
     @Override
     protected Integer doInBackground(String... arg0) {
-        String result = httpAgent.request("api/app/label-add", paras, "");
-        try{
-            JSONObject mess= JSONObject.parseObject(result);
-            msgCode = mess.getString("code");
-            msgBody = mess.getString("msg");
-        }catch (Exception e) {
-            Log.e("book", e.getMessage(),e);
-        }
         return null;
     }
 }

@@ -35,16 +35,6 @@ public class BookShareCancleTask extends AsyncTask<String, Integer, Integer> {
 	@Override
 	protected Integer doInBackground(String... params) {
 		int code = 500;
-		Https httpAgent = new Https();
-		HashMap<String, Object> paras = new HashMap<String, Object>();
-		paras.put("bookId", params[0]);
-		String result = httpAgent.request("api/app/cancle-share", paras, "");
-		try {
-			JSONObject jsonResult = new JSONObject(result);
-			code = jsonResult.getInt("code");
-		} catch (Exception e) {
-			Log.e("book", e.getMessage(), e);
-		}
 		return code;
 	}
 

@@ -20,7 +20,6 @@ import java.util.HashMap;
  */
 public class ShareTask extends AsyncTask<String, Integer, Integer> {
 
-    public Https httpAgent = new Https();
     private String title, author, summary, publisher, isbn10, isbn13, image, price;
     public HashMap<String, Object> paras = new HashMap<String, Object>();
     private String code = "";
@@ -87,14 +86,6 @@ public class ShareTask extends AsyncTask<String, Integer, Integer> {
      */
     @Override
     protected Integer doInBackground(String... arg0) {
-        String result = httpAgent.request("api/app/sharebook", paras, "");
-        try {
-            JSONObject mess = new JSONObject(result);
-            code = mess.getString("code");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
         return null;
     }
 }

@@ -1,4 +1,4 @@
-package com.fhmou.tools;
+package com.fhmou.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

@@ -1,4 +1,4 @@
-package com.fhmou.tools.camera;
+package com.fhmou.utils.camera;
 
 import java.io.IOException;
 

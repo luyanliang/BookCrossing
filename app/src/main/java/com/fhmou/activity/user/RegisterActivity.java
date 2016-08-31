@@ -1,6 +1,5 @@
 package com.fhmou.activity.user;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,7 +12,8 @@ import android.widget.Toast;
 import com.fhmou.activity.MainActivity;
 import com.fhmou.activity.R;
 import com.fhmou.asyncTask.RegisterTask;
-import com.fhmou.tools.CleanableEditText;
+import com.fhmou.base.BaseActivity;
+import com.fhmou.utils.CleanableEditText;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -25,7 +25,7 @@ import java.util.regex.Pattern;
  * @version 1.0 16-8-25 下午4:43
  * @auther luyanliang [765673481@qq.com]
  */
-public class RegisterActivity extends Activity implements View.OnClickListener {
+public class RegisterActivity extends BaseActivity {
 
     private Button go_back;
     private Button ensure_button;

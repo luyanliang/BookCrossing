@@ -20,7 +20,7 @@ import com.fhmou.activity.R;
 import com.fhmou.entity.Book;
 import com.fhmou.activity.book.BookDetailActivity;
 import com.fhmou.asyncTask.SearchTask;
-import com.fhmou.tools.CleanableEditText;
+import com.fhmou.utils.CleanableEditText;
 
 public class SearchFragment extends Fragment {
 

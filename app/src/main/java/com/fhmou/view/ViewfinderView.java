@@ -12,7 +12,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.fhmou.activity.R;
-import com.fhmou.tools.camera.CameraManager;
+import com.fhmou.utils.camera.CameraManager;
 import com.google.zxing.ResultPoint;
 
 import java.util.Collection;

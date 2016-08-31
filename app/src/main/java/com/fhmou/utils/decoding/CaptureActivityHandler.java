@@ -1,4 +1,4 @@
-package com.fhmou.tools.decoding;
+package com.fhmou.utils.decoding;
 
 import java.util.Vector;
 
@@ -12,8 +12,8 @@ import android.os.Message;
 import android.util.Log;
 
 import com.fhmou.activity.R;
-import com.fhmou.tools.camera.CameraManager;
-import com.fhmou.tools.scan.MipcaActivityCapture;
+import com.fhmou.utils.camera.CameraManager;
+import com.fhmou.utils.scan.MipcaActivityCapture;
 import com.fhmou.view.ViewfinderResultPointCallback;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;

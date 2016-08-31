@@ -1,4 +1,4 @@
-package com.fhmou.tools.bitmap;
+package com.fhmou.utils.bitmap;
 
 import android.app.ActivityManager;
 import android.content.Context;

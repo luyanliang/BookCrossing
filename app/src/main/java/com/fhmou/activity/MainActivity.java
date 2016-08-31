@@ -36,8 +36,8 @@ import com.fhmou.fragment.MybookFragment;
 import com.fhmou.fragment.ScanbookFragment;
 import com.fhmou.fragment.SearchFragment;
 import com.fhmou.fragment.SettingFragment;
-import com.fhmou.tools.Util;
-import com.fhmou.tools.scan.MipcaActivityCapture;
+import com.fhmou.utils.Util;
+import com.fhmou.utils.scan.MipcaActivityCapture;
 
 public class MainActivity extends Activity {
 

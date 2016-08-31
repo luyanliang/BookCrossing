@@ -1,9 +1,9 @@
-package com.fhmou.tools.decoding;
+package com.fhmou.utils.decoding;
 
 import android.os.Handler;
 import android.os.Looper;
 
-import com.fhmou.tools.scan.MipcaActivityCapture;
+import com.fhmou.utils.scan.MipcaActivityCapture;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.ResultPointCallback;

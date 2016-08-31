@@ -8,9 +8,8 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.fhmou.entity.Book;
-import com.fhmou.adapter.BookAdapter;
+import com.fhmou.ui.adapter.BookAdapter;
 import com.fhmou.fragment.SearchFragment;
-import com.fhmou.net.Https;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,7 +25,6 @@ import java.util.List;
 public class SearchTask extends AsyncTask<String, Integer, Integer> {
 
     private BookAdapter adapter;
-    public Https httpAgent = new Https();
     private String title;
     private List<Book> bookList;
     public HashMap<String, Object> paras = new HashMap<String, Object>();
@@ -93,8 +91,6 @@ public class SearchTask extends AsyncTask<String, Integer, Integer> {
      */
     @Override
     protected Integer doInBackground(String... arg0) {
-        String result = httpAgent.request("api/app/books-for-query", paras, "");
-        bookList = parseResult(result);
         return null;
     }
 

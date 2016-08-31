@@ -29,16 +29,7 @@ public class ShareLoctionTask extends AsyncTask<String, Integer, Integer> {
 		paras.put("address", params[2]);
 		
 		int code = 500;
-		Https httpAgent = new Https();
-		String result = httpAgent.request("api/app/add-location", paras, "");
-		try {
-			JSONObject jsonResult = new JSONObject(result);
-			code = jsonResult.getInt("code");
-			msgBody = jsonResult.getString("msg");
-		} catch (JSONException e) {
-			msgBody="网络出现错误";
-			Log.e("book", e.getMessage(), e);
-		}
+
 		return code;
 	}
 	@Override

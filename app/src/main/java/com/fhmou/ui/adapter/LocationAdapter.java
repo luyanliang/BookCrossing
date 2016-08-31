@@ -1,4 +1,4 @@
-package com.fhmou.adapter;
+package com.fhmou.ui.adapter;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -14,7 +14,7 @@ import com.fhmou.entity.UserLocation;
 import java.util.List;
 
 /**
- * package com.fhmou.adapter
+ * package com.fhmou.ui.adapter
  * functional describe:
  *
  * @version 1.0 16-8-26 下午12:33

@@ -1,4 +1,4 @@
-package com.fhmou.tools.camera;
+package com.fhmou.utils.camera;
 
 import android.os.IBinder;
 import android.util.Log;

@@ -21,7 +21,6 @@ import java.util.HashMap;
  */
 public class AutoLoginTask extends AsyncTask<String, Integer, Integer> {
 
-    public Https httpAgent = new Https();
     public HashMap<String, Object> paras = new HashMap<String, Object>();
     private StartActivity startActivity;
 
@@ -72,15 +71,6 @@ public class AutoLoginTask extends AsyncTask<String, Integer, Integer> {
      */
     @Override
     protected Integer doInBackground(String... arg0) {
-        String result = httpAgent.request("api/app/login", paras, "");
-        try{
-            JSONObject mess=new JSONObject(result);
-            msgCode = mess.getString("code");
-            msgBody = mess.getJSONObject("msg");
-        }catch (Exception e) {
-            Log.e("book", e.getMessage(), e);
-        }
-
         return null;
     }
 }

@@ -7,9 +7,9 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
-import com.fhmou.tools.json.AbstractObject;
+import com.fhmou.utils.json.AbstractObject;
 import com.fhmou.entity.Label;
-import com.fhmou.adapter.LabelAdapter;
+import com.fhmou.ui.adapter.LabelAdapter;
 import com.fhmou.fragment.LabelFragment;
 
 import java.util.ArrayList;

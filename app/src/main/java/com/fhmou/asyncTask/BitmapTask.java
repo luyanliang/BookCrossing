@@ -7,8 +7,8 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ImageView;
 
-import com.fhmou.tools.bitmap.ImageFileCache;
-import com.fhmou.tools.bitmap.ImageMemoryCache;
+import com.fhmou.utils.bitmap.ImageFileCache;
+import com.fhmou.utils.bitmap.ImageMemoryCache;
 
 import java.net.URL;
 

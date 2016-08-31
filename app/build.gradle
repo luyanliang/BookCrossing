@@ -39,4 +39,7 @@ dependencies {
     //高德地图
     compile group: 'com.amap.api', name: 'location', version: '2.7.0'
     compile group: 'com.amap.api', name: 'navi', version: '1.9.1'
+
+    //加载图标　https://github.com/castorflex/SmoothProgressBar
+    compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
 }

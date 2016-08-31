@@ -1,4 +1,4 @@
-package com.fhmou.tools.bitmap;
+package com.fhmou.utils.bitmap;
 
 import java.io.File;
 import java.io.FileNotFoundException;

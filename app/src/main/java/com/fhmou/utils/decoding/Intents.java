@@ -1,4 +1,4 @@
-package com.fhmou.tools.decoding;
+package com.fhmou.utils.decoding;
 
 /**
  * package com.fhmou.tools.decoding

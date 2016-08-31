@@ -1,4 +1,4 @@
-package com.fhmou.tools.decoding;
+package com.fhmou.utils.decoding;
 
 import android.app.Activity;
 
