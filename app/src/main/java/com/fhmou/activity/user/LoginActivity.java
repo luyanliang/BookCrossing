@@ -7,19 +7,23 @@ import android.os.Message;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.fhmou.activity.GuideActivity;
 import com.fhmou.activity.MainActivity;
 import com.fhmou.activity.R;
 import com.fhmou.base.BaseActivity;
 import com.fhmou.utils.CleanableEditText;
+import com.fhmou.utils.SPUtils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
  * package com.fhmou.tools
- * functional describe:
+ * functional describe: 登录页面
+ *
  * @auther luyanliang [765673481@qq.com]
  * @version 1.0 2016-08-25 16:03
  */
@@ -32,17 +36,25 @@ public class LoginActivity extends BaseActivity {
 
     public String nickName = "";
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_login);
+    private void initLoginView() {
         login_button = (Button) findViewById(R.id.signin_button);
         signup_button = (Button) findViewById(R.id.signup_button);
         login_button.setOnClickListener(this);
         signup_button.setOnClickListener(this);
         user_name = (CleanableEditText) findViewById(R.id.username_edit);
         user_password = (CleanableEditText) findViewById(R.id.password_edit);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (SPUtils.getBoolean(SPUtils.Impl.FLAG_IS_FIRST, true)) {
+            startActivity(new Intent(this, GuideActivity.class));
+        } else {
+            requestWindowFeature(Window.FEATURE_NO_TITLE);
+            setContentView(R.layout.activity_login);
+            initLoginView();
+        }
     }
 
     @Override
@@ -103,4 +115,14 @@ public class LoginActivity extends BaseActivity {
             }
         }
     };
+
+    @Override
+    public void onFailure(int paramInt, String paramString1, String paramString2) {
+
+    }
+
+    @Override
+    public void onSuccess(String paramString, Object paramObject) {
+
+    }
 }

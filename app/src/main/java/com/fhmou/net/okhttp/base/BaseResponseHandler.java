@@ -2,6 +2,7 @@ package com.fhmou.net.okhttp.base;
 
 import android.os.Handler;
 import android.os.Looper;
+import android.os.Message;
 import android.os.RecoverySystem;
 
 import com.fhmou.net.okhttp.ResponseListener;
@@ -29,6 +30,11 @@ public abstract class BaseResponseHandler extends Handler {
         super(Looper.getMainLooper());
         this.mBaseUrl = tag;
         mResponseListener = new WeakReference<ResponseListener>(listener);
+    }
+
+    @Override
+    public void handleMessage(Message message) {
+
     }
 
 }

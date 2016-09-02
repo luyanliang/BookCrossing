@@ -9,5 +9,7 @@ package com.fhmou.net.okhttp;
  */
 public abstract interface ResponseListener {
 
-    public abstract void onFailure(int j);
+    public abstract void onFailure(int paramInt, String paramString1, String paramString2);
+
+    public abstract void onSuccess(String paramString, Object paramObject);
 }

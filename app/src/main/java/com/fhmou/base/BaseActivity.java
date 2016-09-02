@@ -20,11 +20,6 @@ public abstract class BaseActivity extends FragmentActivity
     private DialogProgress loadingDialog;
 
     @Override
-    public void onFailure(int j) {
-
-    }
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
     }

@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
- <color name="simiple_button_color">#FFF</color>
-  <color name="link_color">#FF0066CC</color>  
+    <color name="simiple_button_color">#FFF</color>
+    <color name="link_color">#FF0066CC</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="colorBlack">#ff000000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="mintcream">#F5FFFA</color>
+    <color name="azure">#F0FFFF</color><!--天蓝色 -->
+    <color name="huise">#666666</color><!--天蓝色 -->
+    <color name="blueviolet">#8A2BE2</color><!--紫罗兰蓝色 -->
+    <color name="tag_color">#7b3e1f</color>
 </resources>
