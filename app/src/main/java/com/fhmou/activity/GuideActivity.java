@@ -48,7 +48,7 @@ public class GuideActivity extends BaseActivity {
     }
 
     @Override
-    public void onSuccess(String paramString, Object paramObject) {
+    public void onSuccess(String url, Object obj) {
 
     }
 }

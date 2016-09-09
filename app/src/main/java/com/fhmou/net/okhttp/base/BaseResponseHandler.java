@@ -6,6 +6,8 @@ import android.os.Message;
 import android.os.RecoverySystem;
 
 import com.fhmou.net.okhttp.ResponseListener;
+import com.fhmou.net.okhttp.progress.ProgressInfo;
+import com.fhmou.net.okhttp.progress.listener.ProgressListener;
 
 import java.lang.ref.WeakReference;
 
@@ -24,6 +26,7 @@ public abstract class BaseResponseHandler extends Handler {
     public static final int UPDATE = 2;
 
     protected String mBaseUrl;
+    protected ProgressListener mProgress;
     protected final WeakReference<ResponseListener> mResponseListener;
 
     public BaseResponseHandler(String tag, ResponseListener listener) {
@@ -32,9 +35,22 @@ public abstract class BaseResponseHandler extends Handler {
         mResponseListener = new WeakReference<ResponseListener>(listener);
     }
 
+    public BaseResponseHandler(String tag, ResponseListener listener, ProgressListener progressListener) {
+        this(tag, listener);
+        this.mProgress = progressListener;
+    }
+
     @Override
     public void handleMessage(Message message) {
-
+        ResponseListener listener = mResponseListener.get();
+        if (mProgress != null) {
+            ProgressInfo info = (ProgressInfo) message.obj;
+            if (info != null) {
+                mProgress.onProgress(info.getCurrentBytes(), info.getContentLength(), info.isDone());
+            }
+        }
+        listener.onSuccess(mBaseUrl, message.obj);
+        listener.onFailure(message.arg1, mBaseUrl, message.obj.toString());
     }
 
 }

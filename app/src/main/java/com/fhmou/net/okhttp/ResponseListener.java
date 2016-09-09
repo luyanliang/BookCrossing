@@ -7,9 +7,9 @@ package com.fhmou.net.okhttp;
  * @version 1.0 16-8-28 上午10:40
  * @auther luyanliang [765673481@qq.com]
  */
-public abstract interface ResponseListener {
+public interface ResponseListener {
 
-    public abstract void onFailure(int paramInt, String paramString1, String paramString2);
+    void onFailure(int arg1, String url, String obj);
 
-    public abstract void onSuccess(String paramString, Object paramObject);
+    void onSuccess(String url, Object obj);
 }

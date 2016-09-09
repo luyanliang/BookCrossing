@@ -97,8 +97,8 @@ public class LoginTransitActivity extends Activity {
                 Intent intent = new Intent();
                 intent.setClass(LoginTransitActivity.this, MainActivity.class);
                 intent.putExtra("username",nickName);
-                LoginTransitActivity.this.startActivity(intent);
-                LoginTransitActivity.this.finish();
+                startActivity(intent);
+                finish();
             }
         }
     };
